@@ -1,0 +1,9 @@
+<?php
+ 
+function hello_menu() {
+  $items['hello'] = array(
+    'title' => 'Hello Page',
+    'route_name' => 'hello.world',    
+  );
+  return $items;
+}

@@ -1,0 +1,6 @@
+name: Hello World module
+type: module
+description: An Hello World module showing D8 capabilites
+package: Example modules
+core: 8.x
+version: 8.x-1.x-dev
