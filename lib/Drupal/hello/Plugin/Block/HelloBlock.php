@@ -23,21 +23,16 @@ use Drupal\Core\Session\AccountInterface;
  */
 class HelloBlock extends BlockBase {
  
-  /**
-   * {@inheritdoc}
-   */
   public function access(AccountInterface $account) {
 //    return $account->hasPermission('access comments');
     return true;
   }
 
  
-  /**
-   * {@inheritdoc}
-   */
   public function build() {
 //    return array('#markup' => 'Hello workd block text !');
-    return array('#markup' => theme('hello_text', array('text' => 'anonymous')),);
+//    return array('#markup' => theme('hello_text', array('text' => 'anonymous')),);
+    return array('#markup' => theme('hello_text', array('text' => config('hello.settings')->get('hello_value'))),);
   }
  
 }

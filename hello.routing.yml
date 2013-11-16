@@ -7,7 +7,7 @@ hello.world:
     _permission: 'access content'
 
 hello.form:
-  path: 'admin/hello/form'
+  path: 'admin/config/content/hello'
   defaults:
     _form: '\Drupal\hello\Form\HelloForm'
   requirements:
