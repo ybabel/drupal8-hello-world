@@ -3,7 +3,7 @@
 Showing Drupal 8 concepts in the most simple way
 Contains : 
  - a simple page  URL : /helloworld
- - a **blockµ** displaying a simple message
- - a **configuration** **form**, URL : /admin/hello/form
+ - a **block** displaying a simple message
+ - a **configuration** **form**, URL : /admin/config/content/hello
  - a **menu** pointing to the simple page
  - a **twig** templating sample
