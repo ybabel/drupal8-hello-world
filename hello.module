@@ -7,3 +7,12 @@ function hello_menu() {
   );
   return $items;
 }
+
+function hello_theme() {
+  return array(
+    'hello_text' => array(
+      'template' => 'hello-text',
+      'variables' => array('text' => NULL)
+    ),
+  );
+}

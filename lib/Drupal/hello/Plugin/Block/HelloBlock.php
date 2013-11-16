@@ -36,8 +36,8 @@ class HelloBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    //$build[] = array('#markup' => 'Hello workd block text !');
-    return array('#markup' => 'Hello workd block text !');
+//    return array('#markup' => 'Hello workd block text !');
+    return array('#markup' => theme('hello_text', array('text' => 'anonymous')),);
   }
  
 }
