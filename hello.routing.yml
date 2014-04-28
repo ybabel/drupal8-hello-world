@@ -1,14 +1,15 @@
 # hello.routing.yml
 hello.world:
-  path: 'helloworld'
+  path: /helloworld
   defaults:
-    _content: '\Drupal\hello\HelloRouteController::index'
+    _content: \Drupal\hello\HelloRouteController::index
+    _title: 'Hello Page'
   requirements:
     _permission: 'access content'
 
 hello.form:
-  path: 'admin/config/content/hello'
+  path: /admin/config/content/hello
   defaults:
-    _form: '\Drupal\hello\Form\HelloForm'
+    _form: \Drupal\hello\Form\HelloForm
   requirements:
     _permission: 'access administration pages'

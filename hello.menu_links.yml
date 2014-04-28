@@ -1,0 +1,11 @@
+hello.world:
+  title: 'Hello Menu Item'
+  menu_name: tools
+  description: 'Link to the Hello Page'
+  route_name: hello.world
+
+hello.form:
+  title: 'Hello Configuration'
+  parent: system.admin_config_system
+  description: 'Configure the Hello module'
+  route_name: hello.form

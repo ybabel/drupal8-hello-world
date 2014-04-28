@@ -10,7 +10,7 @@ namespace Drupal\hello;
 class HelloRouteController {
  
   public function index() {
-    return array('#markup' => 'Hello workd page text (from controller) !');
+    return array('#markup' => 'Hello world page text (from controller) !');
   }
  
 }
