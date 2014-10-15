@@ -1,0 +1,2 @@
+#config/hello.settings.yml
+hello_value: 'Anonymous from config'

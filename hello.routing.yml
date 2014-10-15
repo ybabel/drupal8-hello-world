@@ -2,9 +2,10 @@
 hello.world:
   path: 'helloworld'
   defaults:
-    _content: '\Drupal\hello\HelloRouteController::index'
+    _content: '\Drupal\hello\Controller\HelloRouteController::index'
   requirements:
-    _permission: 'access content'
+    _permission: 'TRUE'
+#    _permission: 'access content'
 
 hello.form:
   path: 'admin/config/content/hello'

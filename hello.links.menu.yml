@@ -1,0 +1,6 @@
+hello.main:
+  title: Hello world
+  route_name: hello.world
+hello.form:
+  title: Hello config
+  route_name: hello.form

@@ -23,7 +23,7 @@ class HelloForm extends FormBase {
       '#title' => t('Who are you ?'),
       '#size' => 60,
       '#description' => t('This text will appear in the hello world block.'),
-      '#default_value' => config('hello.settings')->get('hello_value'),
+      '#default_value' => \Drupal::config('hello.settings')->get('hello_value'),
     );
     $form['submit'] = array(
       '#type' => 'submit',
@@ -34,7 +34,7 @@ class HelloForm extends FormBase {
  
 
   public function submitForm(array &$form, array &$form_state) {
-    config('hello.settings')
+    \Drupal::config('hello.settings')
       ->set('hello_value', $form_state['values']['hello_config'])
       ->save(); 
   }

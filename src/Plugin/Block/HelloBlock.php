@@ -31,8 +31,8 @@ class HelloBlock extends BlockBase {
  
   public function build() {
 //    return array('#markup' => 'Hello workd block text !');
-//    return array('#markup' => theme('hello_text', array('text' => 'anonymous')),);
-    return array('#markup' => theme('hello_text', array('text' => config('hello.settings')->get('hello_value'))),);
+//    return array('#markup' => _theme('hello_text', array('text' => 'anonymous')),);
+    return array('#markup' => _theme('hello_text', array('text' => \Drupal::config('hello.settings')->get('hello_value'))),);
   }
  
 }
