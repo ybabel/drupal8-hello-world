@@ -9,6 +9,7 @@ namespace Drupal\hello\Form;
  
 use Drupal\Core\Form\FormInterface;
 use Drupal\Core\Form\FormBase; 
+use Drupal\Core\Form\FormStateInterface;
 
 //class HelloForm implements FormInterface {
 class HelloForm extends FormBase {
@@ -17,7 +18,7 @@ class HelloForm extends FormBase {
     return 'hello_form';
   }
 
-  public function buildForm(array $form, array &$form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $form['hello_config'] = array(
       '#type' => 'textfield',
       '#title' => t('Who are you ?'),
@@ -32,8 +33,7 @@ class HelloForm extends FormBase {
     return $form;
   }
  
-
-  public function submitForm(array &$form, array &$form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state) {
     \Drupal::config('hello.settings')
       ->set('hello_value', $form_state['values']['hello_config'])
       ->save(); 
