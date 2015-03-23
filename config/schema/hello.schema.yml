@@ -1,0 +1,13 @@
+# Schema for the configuration files of the Hello World module.
+
+# Documentation for schema files like this one is located here:
+# https://drupal.org/node/1905070
+
+hello.settings:
+  type: mapping
+  label: 'Hello'
+  mapping:
+    hello_value:
+      type: string
+      label: 'Hello Value'
+

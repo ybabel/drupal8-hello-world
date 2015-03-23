@@ -34,8 +34,9 @@ class HelloForm extends FormBase {
   }
  
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    \Drupal::config('hello.settings')
-      ->set('hello_value', $form_state['values']['hello_config'])
+    $form_values = $form_state->getValues();
+    \Drupal::service('config.factory')->getEditable('hello.settings')
+      ->set('hello_value', $form_values['hello_config'])
       ->save(); 
   }
  

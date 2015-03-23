@@ -1,5 +1,6 @@
 <?php
- 
+//Console debug output
+//file_put_contents("php://stdout", sprintf("test")); 
 function hello_theme() {
   return array(
     'hello_text' => array(
