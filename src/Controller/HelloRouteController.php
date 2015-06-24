@@ -21,7 +21,16 @@ class HelloRouteController extends ControllerBase {
    *   A renderable array containing the page content.
    */
   public function index() {
-    return array('#markup' => 'Hello world page text (from controller) !');
+//    return array('#markup' => 'Hello world page text (from controller) !');
+    /*return [
+        '#type' => 'markup',
+        '#markup' => $this->t('Hello world page text (from controller) !')
+    ];*/
+
+    return ['#theme' => 'hello_text', 
+            '#text' => \Drupal::config('hello.settings')->get('hello_value')
+    ];
+
   }
  
 }

@@ -4,8 +4,9 @@
 # https://drupal.org/node/1905070
 
 hello.settings:
-  type: mapping
-  label: 'Hello'
+  #type: mapping
+  type: config_object
+  label: 'Hello config'
   mapping:
     hello_value:
       type: string

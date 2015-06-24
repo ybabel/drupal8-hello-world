@@ -2,6 +2,7 @@
 hello.world:
   path: 'helloworld'
   defaults:
+    _title: 'Hello world'
     _controller: '\Drupal\hello\Controller\HelloRouteController::index'
   requirements:
     _access: 'TRUE'
