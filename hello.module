@@ -7,6 +7,15 @@ function hello_theme() {
       'template' => 'hello-text',
       'variables' => array('text' => NULL)
     ),
+    'event' => array(                                                                                             
+     'render element' => 'elements',                                                                                    
+     'file' => 'event.page.inc',                                                                                        
+     'template' => 'event',                                                                                             
+   ),
+   'subscription' => array(                                                                                      
+     'render element' => 'elements',                                                                                    
+     'file' => 'subscription.page.inc',                                                                                 
+     'template' => 'subscription',                                                                                      
+   )
   );
 }
-

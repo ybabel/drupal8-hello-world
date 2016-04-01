@@ -4,3 +4,29 @@ hello.main:
 hello.form:
   title: Hello config
   route_name: hello.form
+# Event menu items definition
+entity.event.collection:
+  title: 'Event list'
+  route_name: entity.event.collection
+  description: 'List Event entities'
+  parent: system.admin_structure
+  weight: 100
+
+event.admin.structure.settings:
+  title: Event settings
+  description: 'Configure Event entities'
+  route_name: event.settings
+  parent: system.admin_structure
+# Subscription menu items definition
+entity.subscription.collection:
+  title: 'Subscription list'
+  route_name: entity.subscription.collection
+  description: 'List Subscription entities'
+  parent: system.admin_structure
+  weight: 100
+
+subscription.admin.structure.settings:
+  title: Subscription settings
+  description: 'Configure Subscription entities'
+  route_name: subscription.settings
+  parent: system.admin_structure
