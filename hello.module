@@ -1,6 +1,7 @@
 <?php
 //Console debug output
 //file_put_contents("php://stdout", sprintf("test")); 
+
 function hello_theme() {
   return array(
     'hello_text' => array(
@@ -8,5 +9,23 @@ function hello_theme() {
       'variables' => array('text' => NULL)
     ),
   );
+}
+
+use Drupal\Core\Block\BlockPluginInterface;
+
+function hello_block_view_hello_block_alter(array &$build, BlockPluginInterface $block) {
+  $build = array('#theme' => 'hello_text', '#text' => 'you have been hooked');
+}
+
+use Drupal\Core\Form\FormStateInterface;
+
+function hello_form_hello_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  $form['hello_config']['#description'] = t('This hooked text will appear in the form.');
+}
+
+//hook_menu_alter does not exist any more in D8
+function hello_menu_links_discovered_alter(&$links) {
+  // do not use route name but route ID
+  $links['hello.main']['title'] = 'Hello hooked';
 }
 
