@@ -21,12 +21,12 @@ class HelloRouteController extends ControllerBase {
    *   A renderable array containing the page content.
    */
   public function index1() { //most simple
-    return array('#markup' => 'Hello world page text (from controller) !');
+    return array('#markup' => 'Hello1 world page text (from controller) !');
   }
   public function index2() { // with translated text
     return [
         '#type' => 'markup',
-        '#markup' => $this->t('Hello world page text (from controller) !')
+        '#markup' => $this->t('Hello2 world page text (from controller) !')
     ];
   }
 
@@ -36,7 +36,7 @@ class HelloRouteController extends ControllerBase {
     ];
   }
   public function index4($name) { // with parameter
-    return array('#markup' => "Hello $name page text (from controller) !");
+    return array('#markup' => "Hello4 $name page text (from controller) !");
   }
  
 }
