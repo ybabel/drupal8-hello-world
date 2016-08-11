@@ -3,10 +3,18 @@ hello.world:
   path: 'helloworld'
   defaults:
     _title: 'Hello world'
-    _controller: '\Drupal\hello\Controller\HelloRouteController::index'
+    _controller: '\Drupal\hello\Controller\HelloRouteController::index3'
   requirements:
     _access: 'TRUE'
-#    _permission: 'access content'
+
+hello.world.ext:
+  path: 'hello/{name}'
+  defaults:
+    _title: 'Hello world'
+    _controller: '\Drupal\hello\Controller\HelloRouteController::index4'
+  requirements:
+    _permission: 'access content'
+
 
 hello.form:
   path: 'admin/config/content/hello'
