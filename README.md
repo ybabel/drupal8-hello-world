@@ -7,3 +7,5 @@ Contains :
  - a **configuration** **form**, URL : /admin/config/content/hello
  - a **menu** pointing to the simple page
  - a **twig** templating sample
+ - some **hook_alter** or D8 equivalent for block, menu, route, form
+ - an **entityQuery** sample
