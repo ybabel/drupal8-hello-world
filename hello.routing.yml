@@ -22,3 +22,11 @@ hello.form:
     _form: '\Drupal\hello\Form\HelloForm'
   requirements:
     _permission: 'access administration pages'
+
+hello.query_test_display_last:
+  path: '/display/last'
+  defaults:
+    _controller: '\Drupal\hello\Controller\QueryTest::get_last_articles'
+    _title: 'GetLastArticles'
+  requirements:
+    _permission: 'access content'

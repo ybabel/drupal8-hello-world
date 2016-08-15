@@ -4,3 +4,6 @@ hello.main:
 hello.form:
   title: Hello config
   route_name: hello.form
+hello.lastarticles:
+  title: Last Articles
+  route_name: hello.query_test_display_last 
