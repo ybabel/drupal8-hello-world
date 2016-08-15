@@ -18,7 +18,7 @@ class RouteSubscriber extends RouteSubscriberBase {
    */
   protected function alterRoutes(RouteCollection $collection) {
     if ($route = $collection->get('hello.world')) {
-      $route->setDefaults(array('_controller' => '\Drupal\hello\Controller\HelloRouteController::index2'));
+      $route->setDefaults(array('_controller' => '\Drupal\hello\Controller\HelloRouteController::index5'));
     }
   }
 }

@@ -39,5 +39,13 @@ class HelloRouteController extends ControllerBase {
     return array('#markup' => "Hello4 $name page text (from controller) !");
   }
  
+  function index5() { 
+    $user = \Drupal::currentUser();
+    if ($user->hasPermission('access administration menu')) {
+      return array('#markup' => 'Hello5 world page text (you have permissions) !');
+    } else {
+      return array('#markup' => 'Hello5 world page text (you DONT have permissions) !');
+    }
+  }
 }
  
